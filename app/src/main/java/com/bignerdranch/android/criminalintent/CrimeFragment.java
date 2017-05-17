@@ -7,6 +7,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 
@@ -17,6 +18,7 @@ import android.widget.EditText;
 public class CrimeFragment extends android.support.v4.app.Fragment {
     private Crime mCrime;
     private EditText mTitleField;
+    private Button mDateButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,10 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
                 // intentionally left blank
             }
         });
+
+        mDateButton = (Button) v.findViewById(R.id.crime_date);
+        mDateButton.setText(mCrime.getDate().toString());
+        mDateButton.setEnabled(false);
 
         return v;
     }
