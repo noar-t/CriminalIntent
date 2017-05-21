@@ -17,6 +17,7 @@ import static android.widget.CompoundButton.*;
 
 /**
  * Created by noah on 4/15/17.
+ * Fullscreen fragment to input crime data
  */
 
 public class CrimeFragment extends android.support.v4.app.Fragment {

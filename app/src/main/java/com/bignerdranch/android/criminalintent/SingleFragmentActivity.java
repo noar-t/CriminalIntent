@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
  */
 
 public abstract class SingleFragmentActivity extends AppCompatActivity {
+
+    // boiler plate for single fragment activity layouts
     protected abstract Fragment createFragment();
 
     @Override
