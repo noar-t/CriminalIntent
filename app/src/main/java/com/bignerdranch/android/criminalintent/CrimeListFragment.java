@@ -34,7 +34,6 @@ public class CrimeListFragment extends Fragment {
         mCrimeRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         updateUI();
-
         return view;
     }
 
@@ -76,10 +75,7 @@ public class CrimeListFragment extends Fragment {
 
         @Override
         public void onClick(View view) { // listener for touching each view item
-            //Toast.makeText(getActivity(),
-            //        mCrime.getTitle() + " clicked!", Toast.LENGTH_SHORT)
-            //        .show();
-            Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getId());
+            Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getId()); // launch each crimefragment on touch
             startActivity(intent);
         }
     }

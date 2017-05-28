@@ -42,9 +42,7 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //mCrime = new Crime();
-        UUID crimeId = (UUID) getActivity().getIntent()
-                .getSerializableExtra(CrimeActivity.EXTRA_CRIME_ID);
+        UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID); // get the arguments passed by crimelistfragment
         mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
     }
 
