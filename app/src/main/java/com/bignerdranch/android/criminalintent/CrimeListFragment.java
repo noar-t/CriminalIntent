@@ -79,7 +79,7 @@ public class CrimeListFragment extends Fragment {
         public void bind(Crime crime) {
             mCrime = crime;
             mTitleTextView.setText(mCrime.getTitle());
-           SimpleDateFormat mTest = new SimpleDateFormat("EEE, MMM d, ''yy", Locale.getDefault());
+            SimpleDateFormat mTest = new SimpleDateFormat("EEE, MMM d, ''yy", Locale.getDefault());
             mDateTextView.setText(mTest.format(mCrime.getDate())); //"EEE, MMM d, ''yy",
             mSolvedImageView.setVisibility(mCrime.isSolved() ? View.VISIBLE : View.GONE);
         }
