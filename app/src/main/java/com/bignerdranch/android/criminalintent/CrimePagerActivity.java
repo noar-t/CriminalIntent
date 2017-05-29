@@ -54,5 +54,12 @@ public class CrimePagerActivity extends AppCompatActivity {
             }
         });
 
+        for (int i = 0; i < mCrimes.size(); i++) { // handles returning to the proper crime upon exit and reentry
+            if (mCrimes.get(i).equals(crimeId)) {
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
+
     }
 }
