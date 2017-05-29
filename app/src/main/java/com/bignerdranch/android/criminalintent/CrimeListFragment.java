@@ -86,7 +86,7 @@ public class CrimeListFragment extends Fragment {
 
         @Override
         public void onClick(View view) { // listener for touching each view item
-            Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getId()); // launch each crimefragment on touch
+            Intent intent = CrimePagerActivity.newIntent(getActivity(), mCrime.getId()); // launch each crimefragment on touch
             startActivity(intent);
         }
     }
