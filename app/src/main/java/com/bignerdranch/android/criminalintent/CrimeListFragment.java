@@ -56,7 +56,7 @@ public class CrimeListFragment extends Fragment {
         }
     }
 
-    // create class for viewholder to inflate layout for crim list elements
+    // create class for viewholder to inflate layout for crime list elements
     private class CrimeHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
 
