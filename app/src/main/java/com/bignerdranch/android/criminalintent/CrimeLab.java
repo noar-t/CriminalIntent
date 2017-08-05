@@ -8,6 +8,7 @@ import java.util.UUID;
 
 /**
  * Created by noah on 5/18/17.
+ * This is a class to generate crimes and handle the retrieval of them
  */
 
 public class CrimeLab {
