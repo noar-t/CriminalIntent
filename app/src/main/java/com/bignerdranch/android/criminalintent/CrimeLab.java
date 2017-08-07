@@ -25,12 +25,16 @@ public class CrimeLab {
 
     private CrimeLab(Context context) {
         mCrimes = new ArrayList<>();
-        for (int i = 0; i < 100; i++) { // create 100 random crimes
+        /*for (int i = 0; i < 100; i++) { // create 100 random crimes
             Crime crime = new Crime();
             crime.setTitle("Crime #" + i);
             crime.setSolved(i % 2 == 0); // every other
             mCrimes.add(crime);
-        }
+        }*/
+    }
+
+    public void addCrime(Crime c) {
+        mCrimes.add(c);
     }
 
     public List<Crime> getCrimes() {
