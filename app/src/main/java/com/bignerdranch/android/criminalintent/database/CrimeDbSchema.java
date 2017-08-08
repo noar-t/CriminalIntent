@@ -1,4 +1,4 @@
-package com.bignerdranch.android.criminalintent.databse;
+package com.bignerdranch.android.criminalintent.database;
 
 /**
  * Created by noah on 8/7/17.
