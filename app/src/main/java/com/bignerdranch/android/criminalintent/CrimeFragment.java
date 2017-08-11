@@ -2,6 +2,7 @@ package com.bignerdranch.android.criminalintent;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -115,6 +116,7 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
             }
         });
 
+        // send report button
         mReportButton = (Button) v.findViewById(R.id.crime_report);
         mReportButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +143,11 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
             mSuspectButton.setText(mCrime.getSuspect());
         }
 
+        PackageManager packageManager = getActivity().getPackageManager();
+        if (packageManager.resolveActivity(pickContact, PackageManager.MATCH_DEFAULT_ONLY) == null) {
+            mSuspectButton.setEnabled(false);
+        }
+
         return v;
     }
 
@@ -155,7 +162,7 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
             mCrime.setDate(date);
             updateDate();
         }
-        if (requestCode == REQUEST_DATE) {
+        else if (requestCode == REQUEST_CONTACT && data != null) {
             Uri contactUri = data.getData();
             // Specifying which fields you want returned
             String[] queryFields = new String[] {
@@ -168,7 +175,7 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
 
             try {
                 // Verify that data set isnt empty
-                if (c.getCount() == 0) {
+                if (c.getCount() == 0 ) {
                     return;
                 }
 
@@ -204,7 +211,7 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
         if (suspect == null)
             suspect = getString(R.string.crime_report_no_suspect);
         else
-            suspect = getString(R.string.crime_report_suspect);
+            suspect = getString(R.string.crime_report_suspect, suspect);
 
         String report = getString(R.string.crime_report, mCrime.getTitle(), dateString, solvedString, suspect);
 
