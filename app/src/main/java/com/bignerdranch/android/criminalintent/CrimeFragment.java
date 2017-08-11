@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import java.io.File;
 import java.util.Date;
 import java.util.UUID;
 
@@ -40,6 +41,7 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
     private static final int REQUEST_CONTACT = 1;
 
     private Crime mCrime;
+    private File mPhotoFile;
     private EditText mTitleField;
     private Button mDateButton;
     private CheckBox mSolvedCheckBox;
@@ -62,6 +64,7 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
         super.onCreate(savedInstanceState);
         UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID); // get the arguments passed by crimelistfragment
         mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
+        mPhotoFile = CrimeLab.get(getActivity()).getPhotoFile(mCrime);
     }
 
     @Override
