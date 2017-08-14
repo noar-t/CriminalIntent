@@ -10,7 +10,7 @@ import android.graphics.Point;
  */
 
 public class PictureUtils {
-    public static Bitmap getScalaledBitmap(String path, int destWidth, int destHeight) {
+    public static Bitmap getScaledBitmap(String path, int destWidth, int destHeight) {
         // Read in pciture size
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
@@ -41,6 +41,6 @@ public class PictureUtils {
                 .getDefaultDisplay()
                 .getSize(size);
 
-        return getScalaledBitmap(path, size.x, size.y);
+        return getScaledBitmap(path, size.x, size.y);
     }
 }
