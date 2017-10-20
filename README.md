@@ -8,10 +8,10 @@ This is an app to track office or roommate "crimes", such as leaving the dishes 
 
 ## Sceenshots
 1. Main List View
-![](https://i.imgur.com/ai0QtoT.png)
+<img src="https://i.imgur.com/ai0QtoT.png" width="270" height="480">
 2. Detail View
-![](https://i.imgur.com/frnRWsN.png)
+<img src="https://i.imgur.com/frnRWsN.png" width="270" height="480">
 3. Calendar Date Picker
-![](https://i.imgur.com/1LfLoBt.png)
+<img src="https://i.imgur.com/1LfLoBt.png" width="270" height="480">
 3. Sharing Menu
-![](https://i.imgur.com/1LfLoBt.png)
+<img src="https://i.imgur.com/1LfLoBt.png" width="270" height="480">
