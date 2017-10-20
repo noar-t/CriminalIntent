@@ -14,4 +14,4 @@ This is an app to track office or roommate "crimes", such as leaving the dishes 
 3. Calendar Date Picker
 <img src="https://i.imgur.com/1LfLoBt.png" width="270" height="480">
 3. Sharing Menu
-<img src="https://i.imgur.com/1LfLoBt.png" width="270" height="480">
+<img src="https://i.imgur.com/H0zR4vA.png" width="270" height="480">
